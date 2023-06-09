@@ -1,25 +1,148 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.33530.505
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jogo_vdd", "jogo_vdd\jogo_vdd.csproj", "{F16B455E-4FB7-42A1-B416-E7C7D2E59C0D}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F16B455E-4FB7-42A1-B416-E7C7D2E59C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F16B455E-4FB7-42A1-B416-E7C7D2E59C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F16B455E-4FB7-42A1-B416-E7C7D2E59C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F16B455E-4FB7-42A1-B416-E7C7D2E59C0D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E0A74782-721D-43FC-A2B5-31F7B477260C}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace jogo_vdd
+{
+    internal class Program
+    {
+        static void Nome()
+        {
+            
+
+
+
+
+
+        }
+
+        
+        static void Main(string[] args)
+        {
+
+            int li;
+            int ls;
+            int j = 0;
+            int nj;
+            int p;
+            int o;
+            int resposta;
+            int i = 1;
+            string [] nome= new string[10];
+
+
+
+
+
+
+            do {
+                Console.Clear();
+            do
+            {
+                    Random randNum = new Random(); 
+                        o=(randNum.Next(100));
+                   
+                }
+            while (o <= 1 || o >= 100);
+            Console.Clear();
+               
+                Console.WriteLine("Digite o número de Jogadores:");
+            nj = int.Parse(Console.ReadLine());
+            nj = j + nj;
+                
+            Console.Clear();
+            j = nj - nj + 1;
+             
+            li = 1;
+            ls = 100;
+
+                for (int ii = 1; ii <= nj; ii++) {
+                    
+                    string[] nomes = new string[nj];
+                    
+                    Console.WriteLine("Qual e nome do °{0} jogador?", j,j++);
+                    nome[ii] = Console.ReadLine();
+                  
+                }
+
+
+
+                do
+                {
+                    do
+                    {
+                       
+
+                            Console.WriteLine("Vez do Jogador {0} ,Digite um palpite:", nome[i]);
+                            p = int.Parse(Console.ReadLine());
+                        
+                            
+                        
+                    } while (p < li || p > ls);
+                    if (p == o)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Parabéns Jogador {0} ,você Perdeu :D", nome[i]);
+                    }
+
+                    else
+                    {
+                        Console.Clear();
+                        if (p < o)
+                            li = p;
+                        else
+                            if (p > o)
+                            ls = p;
+                       
+                        if (i == nj)
+                            i = 1;
+                        else
+                            i = i + 1;
+
+                        Console.WriteLine("O número oculto esta entre {0} é {1}", li, ls);
+                        if (j >= nj)
+                        {
+                            j = 0;
+                            j = j + 1;
+                        }
+
+                        else
+                            j = j + 1;
+                    }
+                } while (p != o);
+                {
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Quer jogar novamente? Sim(1) Não(2):");
+                    resposta = int.Parse(Console.ReadLine());
+
+
+
+
+
+                }
+            } while (resposta == 1);
+
+                if (resposta == 2) ;
+                Console.WriteLine("FIM DE JOGO.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        }
+    }
+}
+
+
